@@ -1,0 +1,10 @@
+route:
+  receiver: ansible-webhook
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 5m
+
+receivers:
+  - name: ansible-webhook
+    webhook_configs:
+     - url: http://localhost:5001/alert

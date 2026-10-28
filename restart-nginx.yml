@@ -1,0 +1,10 @@
+---
+
+- name: Restart nginx
+  hosts: local
+  become: true
+  tasks:
+    - name: Restart the nginx service
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
